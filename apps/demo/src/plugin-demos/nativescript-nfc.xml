@@ -3,12 +3,27 @@
         <ActionBar title="nativescript-nfc" icon="" class="action-bar">
         </ActionBar>
     </Page.actionBar>
-    <StackLayout class="p-20">
-        <ScrollView class="h-full">
-          <StackLayout>
-            <Button text="Test nativescript-nfc" tap="{{ testIt }}" class="btn btn-primary"/>
+    <ScrollView>
+    <StackLayout>
 
-          </StackLayout>
-        </ScrollView>
+      <Image margin="0" src="~/res/nfc.png" width="60%" horizontalAlignment="center" />
+
+      <StackLayout orientation="horizontal" width="100%">
+        <Button text="NFC available?" tap="{{ doCheckAvailable }}" class="button button-a" width="40%" />
+        <Button text="NFC enabled?" tap="{{ doCheckEnabled }}" class="button button-a" width="40%" />
+      </StackLayout>
+
+      <StackLayout orientation="horizontal" width="100%">
+        <Button text="set ndef listener" tap="{{ doStartNdefListener }}" class="button" width="40%"/>
+        <Button text="clear ndef listener" tap="{{ doStopNdefListener }}" class="button" width="40%"/>
+      </StackLayout>
+
+      <StackLayout orientation="horizontal" width="100%">
+        <Button text="write Text" tap="{{ doWriteText }}" class="button button-d" width="40%" />
+      </StackLayout>
+
+      <Label text="{{ lastNdefDiscovered }}" class="message message-ndef" textWrap="true" />
+
     </StackLayout>
+  </ScrollView>
 </Page>
