@@ -5,7 +5,7 @@ npm run setup
 npm start
 ```
 
-- @cloudhx
+- [@cloudhx/nativescript-nfc](packages/nativescript-nfc/README.md)
 
 # How to use?
 

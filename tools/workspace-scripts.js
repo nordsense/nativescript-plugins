@@ -63,6 +63,13 @@ module.exports = {
 		// packages
 		// build output is always in dist/packages
 		'@cloudhx': {
+			// @cloudhx/nativescript-nfc
+			'nativescript-nfc': {
+				build: {
+					script: 'nx run nativescript-nfc:build.all',
+					description: '@cloudhx/nativescript-nfc: Build',
+				},
+			},
 			'build-all': {
 				script: 'nx run all:build',
 				description: 'Build all packages',
@@ -73,6 +80,10 @@ module.exports = {
 			description: '_____________  Focus (VS Code supported)  _____________',
 		},
 		focus: {
+			'nativescript-nfc': {
+				script: 'nx run nativescript-nfc:focus',
+				description: 'Focus on @cloudhx/nativescript-nfc',
+			},
 			reset: {
 				script: 'nx run all:focus',
 				description: 'Reset Focus',
