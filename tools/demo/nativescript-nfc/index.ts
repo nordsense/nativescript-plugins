@@ -1,5 +1,5 @@
 import { DemoSharedBase } from '../utils';
-import {  } from '@cloudhx/nativescript-nfc';
+import {  } from '@nordsense/nativescript-nfc';
 
 export class DemoSharedNativescriptNfc extends DemoSharedBase {
 

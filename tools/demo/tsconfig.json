@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@cloudhx/*": [
+      "@nordsense/*": [
         "../../packages/*"
       ]
     }

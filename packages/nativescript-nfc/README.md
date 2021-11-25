@@ -1,7 +1,7 @@
-# @cloudhx/nativescript-nfc
+# @nordsense/nativescript-nfc
 
 ```javascript
-ns plugin add @cloudhx/nativescript-nfc
+ns plugin add @nordsense/nativescript-nfc
 ```
 
 ## Usage

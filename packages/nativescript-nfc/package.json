@@ -1,5 +1,5 @@
 {
-  "name": "@cloudhx/nativescript-nfc",
+  "name": "@nordsense/nativescript-nfc",
   "version": "1.0.1",
   "description": "Add a plugin description",
   "main": "index",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cloudhx/nativescript-plugins.git"
+    "url": "https://github.com/nordsense/nativescript-plugins.git"
   },
   "keywords": [
     "NativeScript",
@@ -26,10 +26,10 @@
     "email": "cloud.han.xiao@gmail.com"
   },
   "bugs": {
-    "url": "https://github.com/cloudhx/nativescript-plugins/issues"
+    "url": "https://github.com/nordsense/nativescript-plugins/issues"
   },
   "license": "Apache-2.0",
-  "homepage": "https://github.com/cloudhx/nativescript-plugins",
+  "homepage": "https://github.com/nordsense/nativescript-plugins",
   "readmeFilename": "README.md",
   "bootstrapper": "@nativescript/plugin-seed"
 }

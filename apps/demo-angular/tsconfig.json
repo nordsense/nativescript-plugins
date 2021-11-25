@@ -13,7 +13,7 @@
       "@demo/shared": [
         "../../tools/demo/index.ts"
       ],
-      "@cloudhx/*": [
+      "@nordsense/*": [
         "../../dist/packages/*"
       ]
     }
