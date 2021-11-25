@@ -28,6 +28,9 @@
       ],
       "@cloudhx/*": [
         "packages/*"
+      ],
+      "@nordsense/*": [
+        "packages/*"
       ]
     }
   },

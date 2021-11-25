@@ -15,6 +15,9 @@
       ],
       "@cloudhx/*": [
         "../../dist/packages/*"
+      ],
+      "@nordsense/*": [
+        "../../dist/packages/*"
       ]
     }
   },
