@@ -141,7 +141,6 @@ export class Nfc implements NfcApi, NfcSessionInvalidator {
       this.session.alertMessage = options.startHint;
     }
 
-    console.dir(NFCNDEFTag.prototype);
     this.session.beginSession();
   }
 }
@@ -223,7 +222,8 @@ class NFCNDEFReaderSessionDelegateWriteImpl extends NSObject implements NFCNDEFR
   readerSessionDidDetectNDEFs(session: NFCNDEFReaderSession, messages: NSArray<NFCNDEFMessage>): void {}
 
   readerSessionDidDetectTags(session: NFCNDEFReaderSession, tags: NSArray<NFCNDEFTag> | NFCNDEFTag[]): void {
-    const tag = tags[0];
+    const prototype = NFCNDEFTag.prototype;
+    const tag = (<NSArray<NFCNDEFTag>>tags).firstObject;
 
     session.connectToTagCompletionHandler(tag, (error: NSError) => {
       console.log('connectToTagCompletionHandler');
@@ -238,7 +238,7 @@ class NFCNDEFReaderSessionDelegateWriteImpl extends NSObject implements NFCNDEFR
       const ndefTag: NFCNDEFTag = new interop.Reference<NFCNDEFTag>(interop.types.id, tag).value;
 
       try {
-        NFCNDEFTag.prototype.queryNDEFStatusWithCompletionHandler.call(ndefTag, (status: NFCNDEFStatus, number: number, error: NSError) => {
+        prototype.queryNDEFStatusWithCompletionHandler.call(ndefTag, (status: NFCNDEFStatus, number: number, error: NSError) => {
           console.log('queryNDEFStatusWithCompletionHandler');
           if (error) {
             console.log(error);
