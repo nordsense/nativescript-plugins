@@ -1,11 +1,11 @@
-# @cloudhx/\* plugins
+# @nordsense/\* plugins
 
 ```
 npm run setup
 npm start
 ```
 
-- [@cloudhx/nativescript-nfc](packages/nativescript-nfc/README.md)
+- [@nordsense/nativescript-nfc](packages/nativescript-nfc/README.md)
 
 # How to use?
 
