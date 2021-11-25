@@ -57,17 +57,17 @@ module.exports = {
 			},
 		},
 		'⚙️': {
-			script: `npx cowsay "@cloudhx/* packages will keep your ⚙️ cranking"`,
-			description: '_____________  @cloudhx/*  _____________',
+			script: `npx cowsay "@nordsense/* packages will keep your ⚙️ cranking"`,
+			description: '_____________  @nordsense/*  _____________',
 		},
 		// packages
 		// build output is always in dist/packages
-		'@cloudhx': {
-			// @cloudhx/nativescript-nfc
+		'@nordsense': {
+			// @nordsense/nativescript-nfc
 			'nativescript-nfc': {
 				build: {
 					script: 'nx run nativescript-nfc:build.all',
-					description: '@cloudhx/nativescript-nfc: Build',
+					description: '@nordsense/nativescript-nfc: Build',
 				},
 			},
 			'build-all': {
@@ -82,7 +82,7 @@ module.exports = {
 		focus: {
 			'nativescript-nfc': {
 				script: 'nx run nativescript-nfc:focus',
-				description: 'Focus on @cloudhx/nativescript-nfc',
+				description: 'Focus on @nordsense/nativescript-nfc',
 			},
 			reset: {
 				script: 'nx run all:focus',

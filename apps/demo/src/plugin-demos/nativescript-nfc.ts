@@ -1,6 +1,6 @@
 import { Dialogs, EventData, Page } from '@nativescript/core';
 import { DemoSharedNativescriptNfc } from '@demo/shared';
-import { Nfc, NfcNdefData, NfcTagData } from '@cloudhx/nativescript-nfc';
+import { Nfc, NfcNdefData, NfcTagData } from '@nordsense/nativescript-nfc';
 
 export function navigatingTo(args: EventData) {
 	const page = <Page>args.object;
@@ -76,6 +76,7 @@ export class DemoModel extends DemoSharedNativescriptNfc {
             // data.message is an array of records, so:
             data.message.forEach((record) => {
               console.log('Read record: ' + JSON.stringify(record));
+	      alert("Read record: " + JSON.stringify(record));
               tagMessages.push(record.payloadAsString);
             });
             this.set('lastNdefDiscovered', 'Read: ' + tagMessages.join(', '));
@@ -83,7 +84,7 @@ export class DemoModel extends DemoSharedNativescriptNfc {
         },
         {
           stopAfterFirstRead: true,
-          startHint: 'Scan a tag, baby!',
+          startMessage: 'Scan a tag, baby!',
         }
       )
       .then(() => this.set('lastNdefDiscovered', 'Listening...'))
@@ -110,12 +111,25 @@ export class DemoModel extends DemoSharedNativescriptNfc {
             text: 'Hello!!!!!',
           },
         ],
-        startHint: 'Hold near writable NFC tag to write.',
-        endHint: 'Command sent!',
+        startMessage: "Approach an NFC Tag",
+        endMessage: "Done!",
+        writeGuardBeforeCheckErrorMessage: "Write guard (before) says No!",
+        writeGuardAfterCheckDelay: 5000,
+        writeGuardAfterCheckErrorMessage: "Write guard (after) says No!",
+        writeGuardAfterCheckMessage: "Almost done, please do not remove the tag!"
+      }, (data) => {
+        return true;
+      }, (data) => {
+        return true;
       });
       alert(JSON.stringify(data));
     } catch (e) {
-      alert(e);
+      if (e.name === "WriteGuardBeforeCheckError") {
+        console.log("WriteGuardBeforeCheckError.data", JSON.stringify(e.data));
+      } else if (e.name === "WriteGuardAfterCheckError") {
+        console.log("WriteGuardAfterCheckError.data", JSON.stringify(e.data));
+      }
+      alert(e.message || e);
     }
   }
 

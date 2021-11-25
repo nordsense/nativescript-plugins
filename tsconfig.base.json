@@ -26,7 +26,10 @@
       "@demo/shared": [
         "tools/demo/index.ts"
       ],
-      "@cloudhx/*": [
+      "@nordsense/*": [
+        "packages/*"
+      ],
+      "@nordsense/*": [
         "packages/*"
       ]
     }
