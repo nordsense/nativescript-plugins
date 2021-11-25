@@ -28,6 +28,9 @@
       ],
       "@nordsense/*": [
         "packages/*"
+      ],
+      "@nordsense/*": [
+        "packages/*"
       ]
     }
   },

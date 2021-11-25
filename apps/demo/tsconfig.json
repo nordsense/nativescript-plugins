@@ -15,6 +15,9 @@
       ],
       "@nordsense/*": [
         "../../packages/*"
+      ],
+      "@nordsense/*": [
+        "../../packages/*"
       ]
     }
   }
