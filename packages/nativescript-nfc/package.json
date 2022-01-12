@@ -1,7 +1,7 @@
 {
-  "name": "@nordsense/nativescript-nfc",
+  "name": "@nordsense/nativescript7plus-nfc",
   "version": "6.0.0",
-  "description": "Add a plugin description",
+  "description": "NFC plugin for NativeScript app",
   "main": "index",
   "typings": "index.d.ts",
   "nativescript": {
