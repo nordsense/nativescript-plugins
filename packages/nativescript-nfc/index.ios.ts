@@ -521,6 +521,7 @@ class NFCNDEFReaderSessionDelegateWriteImpl
     error: NSError
   ): void {
     this._owner.get().invalidateSession();
+    this.errorCallback(error);
   }
 }
 
